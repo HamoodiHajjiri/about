@@ -7,9 +7,44 @@
 
 import SwiftUI
 
+struct Connection: View {
+    let name: String
+    let website: String
+    
+    var body: some View {
+        Link(destination: URL(string: website)!) {
+            Text(name)
+        }
+    }
+}
+
 struct MohammadView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            LinearGradient(colors: [.white, .teal], startPoint: .bottomTrailing, endPoint: .topLeading)
+            HStack {
+                Image("Mohammad")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 75)
+                    .mask(Circle())
+                    .shadow(radius: 12)
+            
+                VStack(alignment: .leading) {
+                    Text("Mohammad Hajjiri")
+                        .bold()
+                        .font(.title)
+                        
+                    Text("I'm a Swift Accelerator Student.");
+                    
+                    HStack {
+                        Connection(name: "Website", website: "https://www.hamoodihajjiri.com/")
+                        Connection(name: "Instagram", website: "https://www.instagram.com/_hamoodihajjiri")
+                        Connection(name: "Email", website: "mailto:admin@hamoodihajjiri.com")
+                    };
+                };
+            };
+        };
     }
 }
 

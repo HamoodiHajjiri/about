@@ -42,6 +42,7 @@ struct OmarView: View {
                         VStack{
                             Link(destination: URL(string: "https://www.instagram.com/7x.omarr/?next=%2F")!){
                                 Image(systemName: "person")
+                                    .padding(8.0)
                                     .font(.system(size:40))
                                     .foregroundColor(.white)
                                     .background(Color.black.opacity(0.9))
@@ -49,12 +50,14 @@ struct OmarView: View {
                                 Link(destination: URL(string: "https://www.discord.com")!){
                                     Image(systemName: "paperplane")
                                         .foregroundColor(.white)
+                                        .padding(5.0)
                                         .font(.system(size:40))
                                         .background(Color.black.opacity(0.9))
                                         .clipShape(Circle())
                                     Link(destination: URL(string: "https://www.sportsmockery.com/chicago-bulls/heres-why-michael-jordan-is-still-the-greatest-player-of-all-time/#:~:text=Dominated%20on%20both%20ends%20of,the%20history%20of%20the%20NBA.")!){
                                         Image(systemName: "figure.basketball")
                                             .foregroundColor(.white)
+                                            .padding(4.0)
                                             .font(.system(size:40))
                                             .background(Color.black.opacity(0.9))
                                             .clipShape(Circle())

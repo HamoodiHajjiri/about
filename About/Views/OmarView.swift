@@ -10,22 +10,24 @@ import SwiftUI
 struct OmarView: View {
     var body: some View {
         ZStack {
-                    LinearGradient(gradient: Gradient(colors: [.black, .white, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    HStack {
+                    LinearGradient(gradient: Gradient(colors: [ .white, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    VStack {
                         Image("Omar")
                             .resizable()
                             .scaledToFit()
                             .mask(Circle())
-                            .frame(width: 200, height: 300)
+                            .frame(width: 150)
                             .overlay(
                                 Circle()
                                     .stroke(Color.white,lineWidth: 4)
                             )
-                        VStack (alignment: .leading, spacing: 5){
+                        VStack{
                             Link(destination: URL(string: "https://aldurrahint.com")!, label: {
                                 Text("Omar")
                                     .foregroundColor(.blue)
+                                    .offset(y: -25)
                                 Text("Saif")
+                                    .offset(y: -25)
                             })
                             .bold()
                             .foregroundColor(.black)
@@ -35,24 +37,25 @@ struct OmarView: View {
                                 .italic()
                                 .foregroundColor(.black)
                                 .font(.system(size:15)).multilineTextAlignment(.center)
+                                .offset(y: -15)
                         }
-                        VStack (spacing: 10){
+                        VStack{
                             Link(destination: URL(string: "https://www.instagram.com/7x.omarr/?next=%2F")!){
                                 Image(systemName: "person")
-                                    .font(.system(size:30))
+                                    .font(.system(size:40))
                                     .foregroundColor(.white)
                                     .background(Color.black.opacity(0.9))
                                     .clipShape(Circle())
                                 Link(destination: URL(string: "https://www.discord.com")!){
                                     Image(systemName: "paperplane")
                                         .foregroundColor(.white)
-                                        .font(.system(size:30))
+                                        .font(.system(size:40))
                                         .background(Color.black.opacity(0.9))
                                         .clipShape(Circle())
                                     Link(destination: URL(string: "https://www.sportsmockery.com/chicago-bulls/heres-why-michael-jordan-is-still-the-greatest-player-of-all-time/#:~:text=Dominated%20on%20both%20ends%20of,the%20history%20of%20the%20NBA.")!){
                                         Image(systemName: "figure.basketball")
                                             .foregroundColor(.white)
-                                            .font(.system(size:30))
+                                            .font(.system(size:40))
                                             .background(Color.black.opacity(0.9))
                                             .clipShape(Circle())
                                     }
